@@ -1,1 +1,5 @@
 <h1>This is the ventur journals#index page</h1>
+	<% @journals.each do |journal| %>
+		<%= journal.title %>
+		<%= journal.description %>
+	<% end %>
