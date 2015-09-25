@@ -8,10 +8,12 @@ $medium-grey: #bfc0c0;
 #background {
 	background-image: linear-gradient(#000 -95%, transparent 99.9%),
 	image-url("camp.jpg");
-	height: 80vh;
-	
+	height: 70vh;
+	background-size: absolute;
+	background-repeat: no-repeat;
 	background-position: center;
 	text-align: center;
+	min-width: 100%;
 	header {
 		padding: 3rem 0;
 		#logo {
@@ -56,20 +58,42 @@ $medium-grey: #bfc0c0;
 
 #vision {
 	width: 100%;
-	padding: 2rem 0;
+	padding: 3rem 0;
 	h2 {
-		font-size: 2rem;
+		font-size: 1.7rem;
 		text-align: center;
 		color: lighten($dark, 15%)
 	}
 	p {
 		text-align: center;
-		font-size: 1.3rem;
+		font-size: 1.2rem;
+		font-weight: 300;
 		color: lighten($dark, 35%)
 	}
 }
 
 /* RESPONSIVE! */
+
+@media screen and (min-width: 1900px) {
+  #background {
+  	height: 100vh;
+  	background-size: cover;
+  }
+}
+
+
+@media screen and (min-width: 780px) {
+	#vision {
+		.wrapper_wide {
+			p {
+				padding: 1rem 0;
+				width: 50%;
+				margin: 0 auto;
+			}
+		}
+	}
+}
+
 @media screen and (min-width: 480px) {
   #background {
   	height: 100vh;
@@ -82,7 +106,14 @@ $medium-grey: #bfc0c0;
 		}
   }
 	.wrapper_wide {
-		width: 70%;
 		margin: 0 auto;
+		.hr_short {
+			width: 40%
+		}
+		p {
+			padding: 1rem 0;
+			width: 70%;
+			margin: 0 auto;
+		}
 	}
 }

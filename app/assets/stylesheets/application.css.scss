@@ -112,6 +112,17 @@ body {
 	}
 }
 
+.button_dark {
+	border: 3px solid $dark;
+	color: $dark;
+	background: transparent;
+	transition: color .3s ease-in-out;
+	&:hover {
+		border: 3px solid lighten($dark, 15%);
+		color: lighten($dark, 15%);
+	}
+}
+
 .button_block {
 	display: block;
 	margin: 0 auto;
@@ -150,8 +161,42 @@ body {
 	}
 }
 
+.field {
+	margin: .5rem 0 1.5rem 0;
+}
 
+input[type="email"], input[type="text"], input[type="password"], textarea {
+	width: 100%;
+	height: 2.5rem;
+	padding: .25rem 1rem;
+	background: $light;
+	border: 1px solid darken($light, 5%);
+	border-radius: .35rem;
+	margin-top: .5rem;
+}
 
+textarea {
+	min-height: 8rem;
+	padding-top: .8rem;
+	margin-top: .5rem !important;
+	line-height: 1.5 !important;
+}
 
+#form {
+	padding: 0 0 5rem 0;
+	.wrapper_skinny {
+		width: 80%;
+		margin: 0 auto;
+	}
+}
+
+/* RESPONSIVE! */
+@media screen and (min-width: 780px) {
+	#form {
+		.wrapper_skinny {
+			width: 40%;
+		}
+	}
+}
 
 
