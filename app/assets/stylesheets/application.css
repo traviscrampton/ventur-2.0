@@ -23,3 +23,7 @@
   height: 0;
   clear: both;
 }
+
+body {
+	font-family: 'Lato', sans-serif;
+}
