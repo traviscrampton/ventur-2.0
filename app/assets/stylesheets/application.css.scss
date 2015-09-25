@@ -18,10 +18,13 @@ $white: #FFFFFF;
 $highlight: #c6e2d9;
 $dark: #24363A;
 $light: #EDEFF5;
+$light-grey: #EFF0F0;
+$medium-grey: #bfc0c0;
 
 
 @import 'normalize';
 @import 'journals';
+@import 'welcome';
 
 .cf:after {
   content: ".";
@@ -57,6 +60,47 @@ body {
 
 .cf:after {
 	clear: both;
+}
+
+.hr_short {
+	width: 60%;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid $light-grey;
+}
+
+.button {
+  text-transform: uppercase;
+  letter-spacing: 1.3px;
+  text-decoration: none;
+  line-height: 27px;
+  border-radius: 1px;
+  padding: 1rem 2.5rem;
+  background: transparent;
+  color: $medium-grey;
+  border: 3px solid $medium-grey;
+}
+
+.button_highlight {
+	background: transparent;
+	transition: background .3s ease-in-out;
+	&:hover {
+		background: darken($highlight, 7.5%);
+	}
+}
+
+.button_white {
+	color: $medium-grey;
+	background: transparent;
+	transition: color .3s ease-in-out;
+	&:hover {
+		color: lighten($medium-grey, 75%);
+	}
+}
+
+.button_block {
+	display: block;
+	margin: 0 auto;
 }
 
 #main_header {

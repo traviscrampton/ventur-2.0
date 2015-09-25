@@ -45,7 +45,8 @@ $light: #EDEFF5;
 					transition: .2s ease-in-out;
 				}
 				h2 {
-					color: $highlight;
+					transition: color .2s ease-in-out;
+					color: lighten($dark, 20%);
 				}
 			}
 		}

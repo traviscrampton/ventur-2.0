@@ -1,0 +1,81 @@
+$white: #FFFFFF;
+$highlight: #c6e2d9;
+$dark: #24363A;
+$light: #EDEFF5;
+$light-grey: #EFF0F0;
+$medium-grey: #bfc0c0;
+
+#background {
+	background-image: linear-gradient(#000 -95%, transparent 99.9%),
+	image-url("camp.jpg");
+	height: 80vh;
+	background-size: cover;
+	background-position: center;
+	text-align: center;
+	header {
+		padding: 3rem 0;
+		#logo {
+			float: left;
+			text-transform: uppercase;
+			font-weight: 700;
+			text-decoration: none;
+			color: $white;
+			letter-spacing: 3px;
+		}
+		nav {
+			float: right;
+			ul {
+				list-style: none;
+				margin: 0;
+				li {
+					display: inline;
+					margin-left: 2.5rem;
+					a {
+						color: $white;
+						text-decoration: none;
+						transition: color .3s ease-in-out;
+						&:hover {
+							color: darken($white, 7.5%);
+						}
+					}
+				}
+			}
+		}
+	}
+	h1 {
+		color: $white;
+		font-weight: 300;
+		font-size: 1.9rem;
+		letter-spacing: 1px;
+		margin: 4rem 0 3rem 0;
+	}
+	.button {
+	  padding: .8rem 1.7rem;
+	}
+}
+
+#vision {
+	background: #light-grey;
+	padding: 5rem 0;
+	h2 {
+		text-align: center;
+	}
+	p {
+		text-align: center;
+	}
+}
+
+/* RESPONSIVE! */
+@media screen and (min-width: 480px) {
+  #background {
+  	height: 100vh;
+  	h1 {
+			color: $white;
+			font-weight: 300;
+			font-size: 3.5rem;
+			letter-spacing: 1px;
+			margin: 7rem 0 4rem 0;
+		}
+  }
+
+}
