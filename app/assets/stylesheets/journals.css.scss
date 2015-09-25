@@ -15,7 +15,7 @@ $light: #EDEFF5;
 		padding-left: 0;
 		margin: 0;
 		Li {
-			width: 33.33333%;
+			width: 100%;
 			min-height: 18rem;
 			float: left;
 			margin: 0 0 2rem 0;
@@ -52,3 +52,28 @@ $light: #EDEFF5;
 		}
 	}
 }
+
+/* RESPONSIVE! */
+
+@media screen and (min-width: 480px) {
+  #journals {
+		ul {
+			li {
+				width: 50%;
+			}
+		}
+  }
+}
+
+@media screen and (min-width: 850px) {
+  #journals {
+		ul {
+			li {
+				width: 33.3333%;
+			}
+		}
+  }
+}
+
+
+
