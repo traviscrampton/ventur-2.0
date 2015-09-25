@@ -5,6 +5,9 @@ Rails.application.routes.draw do
 
   # You can have the root of your site routed with "root"
   resources :journals
+  authenticated :user do
+    root 'journals#index', as: "authenticated_root"
+  end
   root 'welcome#index'
 
   # Example of regular route:
