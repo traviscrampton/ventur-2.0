@@ -1,0 +1,53 @@
+// Place all the styles related to the journals controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+$white: #FFFFFF;
+$highlight: #c6e2d9;
+$dark: #24363A;
+$light: #EDEFF5;
+
+
+#journals {
+	padding-bottom: 3rem;
+	ul {
+		list-style: none;
+		padding-left: 0;
+		margin: 0;
+		Li {
+			width: 33.33333%;
+			min-height: 18rem;
+			float: left;
+			margin: 0 0 2rem 0;
+			-webkit-box-shadow: 0 1px 1px 0 rgba(0,0,0,0.2);
+			box-shadow: 0 1px 1px 0 rgba(0,0,0,0.2);
+			img { 
+				width: 100%;
+				max-width: 100%;
+				border-radius: .35rem .35rem 0 0;
+			}
+			.journal_overview {
+				padding: 1rem 7.5%;
+				h2 {
+					font-weight: 700;
+					font-size: 1rem;
+					color: $dark;
+				}
+				.chapter_count {
+					font-size: .8rem;
+					color: lighten($dark, 50%);
+					margin: .5rem 0 .25rem 0;
+				}
+			}
+			&:hover {
+				img { 
+					opacity: .9;
+					transition: .2s ease-in-out;
+				}
+				h2 {
+					color: $highlight;
+				}
+			}
+		}
+	}
+}

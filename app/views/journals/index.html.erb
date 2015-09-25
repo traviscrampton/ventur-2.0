@@ -3,14 +3,13 @@
 		<% @journals.each do |journal| %>
 			<%= link_to journal do %>
 				<li>
-					<% @journals.each do |journal| %>
-						<%= journal.title %>
-						<%= truncate(journal.description, length: 140) %>
-					<% end %>
+					<div class="journal_overview">
+						<h2><%= journal.title %></h2>
+						<p class="description"><%= truncate(journal.description, length: 140) %></p>
+						<p class="chapter_count">2 Chapters</p>
+					</div>
 				</li>
 			<% end %>
 		<% end %>
 	</ul>
 </div>
-
-	
