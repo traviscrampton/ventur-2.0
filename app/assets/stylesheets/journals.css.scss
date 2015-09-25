@@ -4,7 +4,7 @@
 
 $white: #FFFFFF;
 $highlight: #c6e2d9;
-$dark: #24363A;
+$dark: #454243;
 $light: #EDEFF5;
 
 
@@ -33,6 +33,9 @@ $light: #EDEFF5;
 					font-size: 1rem;
 					color: $dark;
 				}
+				p {
+					color: $dark;
+				}
 				.chapter_count {
 					font-size: .8rem;
 					color: lighten($dark, 50%);
@@ -55,7 +58,7 @@ $light: #EDEFF5;
 
 /* RESPONSIVE! */
 
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 625px) {
   #journals {
 		ul {
 			li {
@@ -65,7 +68,7 @@ $light: #EDEFF5;
   }
 }
 
-@media screen and (min-width: 880px) {
+@media screen and (min-width: 950px) {
   #journals {
 		ul {
 			li {

@@ -1,4 +1,5 @@
 class JournalsController < ApplicationController
+
 	def index
 		@journals = Journal.all.order("created_at DESC")
 	end

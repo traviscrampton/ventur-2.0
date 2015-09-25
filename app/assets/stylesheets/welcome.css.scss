@@ -1,6 +1,6 @@
 $white: #FFFFFF;
 $highlight: #c6e2d9;
-$dark: #24363A;
+$dark: #454243;
 $light: #EDEFF5;
 $light-grey: #EFF0F0;
 $medium-grey: #bfc0c0;
@@ -9,7 +9,7 @@ $medium-grey: #bfc0c0;
 	background-image: linear-gradient(#000 -95%, transparent 99.9%),
 	image-url("camp.jpg");
 	height: 80vh;
-	background-size: cover;
+	
 	background-position: center;
 	text-align: center;
 	header {
@@ -55,13 +55,17 @@ $medium-grey: #bfc0c0;
 }
 
 #vision {
-	background: #light-grey;
-	padding: 5rem 0;
+	width: 100%;
+	padding: 2rem 0;
 	h2 {
+		font-size: 2rem;
 		text-align: center;
+		color: lighten($dark, 15%)
 	}
 	p {
 		text-align: center;
+		font-size: 1.3rem;
+		color: lighten($dark, 35%)
 	}
 }
 
@@ -77,5 +81,8 @@ $medium-grey: #bfc0c0;
 			margin: 7rem 0 4rem 0;
 		}
   }
-
+	.wrapper_wide {
+		width: 70%;
+		margin: 0 auto;
+	}
 }
