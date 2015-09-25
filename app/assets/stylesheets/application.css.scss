@@ -14,6 +14,12 @@
  *= require_self
  */
 
+$white: #FFFFFF;
+$highlight: #c6e2d9;
+$dark: #24363A;
+$light: #EDEFF5;
+
+
 @import 'normalize';
 
 .cf:after {
@@ -27,3 +33,66 @@
 body {
 	font-family: 'Lato', sans-serif;
 }
+
+.wrapper_wide {
+	width: 90%;
+	margin: 0 auto;
+}
+
+.wrapper {
+	width: 80%;
+	margin: 0 auto;
+}
+
+.wrapper_skinny {
+	width: 50%;
+	margin: 0 auto;
+}
+
+.cf:before, .cf:after {
+	content: " ";
+	display: table;
+}
+
+.cf:after {
+	clear: both;
+}
+
+#main_header {
+	color: $highlight;
+	background: $white;
+	padding: 2.5rem 0;
+	#logo {
+		float: left;
+		text-transform: uppercase;
+		font-weight: 700;
+		text-decoration: none;
+		color: $dark;
+		letter-spacing: 3px;
+	}
+	nav {
+		float: right;
+		ul {
+			list-style: none;
+			margin: 0;
+			li {
+				display: inline;
+				margin-left: 2.5rem;
+				a {
+					color: $dark;
+					text-decoration: none;
+					transition: color .2s ease-in-out;
+					&:hover {
+						color: lighten($dark, 20%);
+					}
+				}
+			}
+		}
+	}
+}
+
+
+
+
+
+
