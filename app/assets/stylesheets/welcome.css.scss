@@ -8,7 +8,7 @@ $medium-grey: #bfc0c0;
 #background {
 	background-image: linear-gradient(#000 -95%, transparent 99.9%),
 	image-url("camp.jpg");
-	height: 70vh;
+	height: 100vh;
 	background-size: absolute;
 	background-repeat: no-repeat;
 	background-position: center;
@@ -49,7 +49,7 @@ $medium-grey: #bfc0c0;
 		font-weight: 300;
 		font-size: 1.9rem;
 		letter-spacing: 1px;
-		margin: 4rem 0 3rem 0;
+		margin: .3rem 0 3rem 0;
 	}
 	.button {
 	  padding: .8rem 1.7rem;
@@ -83,6 +83,12 @@ $medium-grey: #bfc0c0;
 
 
 @media screen and (min-width: 780px) {
+	#background {
+		h1 {
+			font-size: 1rem;
+			margin: 4rem 0 3rem 0;
+		}
+	}
 	#vision {
 		.wrapper_wide {
 			p {
