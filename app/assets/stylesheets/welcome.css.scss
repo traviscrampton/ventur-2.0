@@ -72,6 +72,63 @@ $medium-grey: #bfc0c0;
 	}
 }
 
+#gear_list {
+	width: 100%;
+	padding: 5rem 0;
+	background-image: -webkit-linear-gradient(#000 -95%, transparent 99.9%), image-url("gear-list.jpg");
+	background-image: -o-linear-gradient(#000 -95%, transparent 99.9%), image-url("gear-list.jpg");
+	background-image: linear-gradient(#000 -95%, transparent 99.9%), image-url("gear-list.jpg");
+	background-size: cover;
+	background-position: center center;
+	max-height: 60vh;
+	.col-md-4 {
+		color: $white;
+		text-align: center;
+		text-shadow: 2px 1px 10px rgba(0,0,0, 0.2);
+		h2 {
+			font-size: 1.5rem;
+		}
+		p {
+			font-size: 1.1rem;
+			font-weight: 300;
+			b {
+				letter-spacing: 1px;
+			}
+		}
+	}
+}
+#iphone {
+	width: 100%;
+	padding: 5rem 0 0 0;
+	text-align: center;
+	background-image: -webkit-linear-gradient(#000 -95%, transparent 99.9%), image-url("biker.jpg");
+	background-image: -o-linear-gradient(#000 -95%, transparent 99.9%), image-url("biker.jpg");
+	background-image: linear-gradient(#000 -95%, transparent 99.9%), image-url("biker.jpg");
+	background-size: cover;
+	background-position: center center;
+	max-height: 100vh;
+	.col-md-4-left {
+		color: $white;
+		text-shadow: 2px 1px 10px rgba(0,0,0, 0.2);
+		h2 {
+			font-size: 1.5rem;
+		}
+		p {
+			font-size: 1.1rem;
+			font-weight: 300;
+			b {
+				letter-spacing: 1px;
+			}
+		}
+	}
+	.iphone_gear_list {
+    margin: 0 0;
+    .iphone_image {
+    	width: 66.6%;
+    }
+	}
+}
+
 /* RESPONSIVE! */
 
 @media screen and (min-width: 1900px) {
@@ -96,6 +153,45 @@ $medium-grey: #bfc0c0;
 				width: 50%;
 				margin: 0 auto;
 			}
+		}
+	}
+	#gear_list {
+		height: 60vh;
+		.col-md-4 {
+			width: 33.333%;
+			float: right;
+			text-align: left;
+			padding: 3rem auto;
+			h2 {
+				font-size: 1.7rem;
+			}
+			p {
+				margin: 0 0;
+				font-size: 1.3rem;
+			}
+		}
+	}
+	#iphone {
+		.col-md-4-left {
+			margin-left: 3rem;
+			width: 33.333%;
+			float: left;
+			text-align: left;
+			padding: 4rem;
+			h2 {
+				font-size: 1.7rem;
+			}
+			p {
+				margin: 0 0 2rem 0;
+				font-size: 1.3rem;
+			}
+		}
+		.iphone_gear_list {
+			margin-bottom: 0;
+			padding: 0 0;
+			.iphone_image {
+    		width: 400px;
+    	}
 		}
 	}
 }
