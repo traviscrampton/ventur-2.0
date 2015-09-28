@@ -1,5 +1,7 @@
 class JournalsController < ApplicationController
-
+	before_action :find_journal, only: [:show, :edit, :update, :destroy]
+	before_action :authenticate_user!, except: [:index, :show]
+	
 	def index
 		@journals = Journal.all.order("created_at DESC")
 	end
@@ -21,8 +23,23 @@ class JournalsController < ApplicationController
 		@journal = Journal.find(params[:id])
 	end
 
+	def edit
+	end
+
+	def update
+		if @journal.update journal_params
+			redirect_to @journal
+		else
+			render 'edit'
+		end
+	end
+
 	private
 
+		def find_journal 
+			@journal = Journal.find(params[:id])
+		end
+				
 		def journal_params
 			params.require(:journal).permit(:title, :description)
 		end
