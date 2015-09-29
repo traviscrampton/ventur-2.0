@@ -75,9 +75,9 @@ $medium-grey: #bfc0c0;
 #gear_list {
 	width: 100%;
 	padding: 5rem 0;
-	background-image: -webkit-linear-gradient(#000 -95%, transparent 99.9%), image-url("gear-list.jpg");
-	background-image: -o-linear-gradient(#000 -95%, transparent 99.9%), image-url("gear-list.jpg");
-	background-image: linear-gradient(#000 -95%, transparent 99.9%), image-url("gear-list.jpg");
+	background-image: -webkit-linear-gradient(#000 -75%, transparent 99.9%), image-url("gear-list.jpg");
+	background-image: -o-linear-gradient(#000 -75%, transparent 99.9%), image-url("gear-list.jpg");
+	background-image: linear-gradient(#000 -75%, transparent 99.9%), image-url("gear-list.jpg");
 	background-size: cover;
 	background-position: center center;
 	max-height: 60vh;
@@ -106,7 +106,7 @@ $medium-grey: #bfc0c0;
 	background-image: linear-gradient(#000 -95%, transparent 99.9%), image-url("biker.jpg");
 	background-size: cover;
 	background-position: center center;
-	max-height: 100vh;
+	min-height: 500px;
 	.col-md-4-left {
 		color: $white;
 		text-shadow: 2px 1px 10px rgba(0,0,0, 0.2);
@@ -121,11 +121,11 @@ $medium-grey: #bfc0c0;
 			}
 		}
 	}
-	.iphone_gear_list {
-    margin: 0 0;
-    .iphone_image {
-    	width: 66.6%;
-    }
+	.iphone_image {
+		display: block;
+    margin: 0 auto;
+    width: 66.6%;
+    max-width: 400px;
 	}
 }
 
@@ -139,7 +139,7 @@ $medium-grey: #bfc0c0;
 }
 
 
-@media screen and (min-width: 780px) {
+@media screen and (min-width: 865px) {
 	#background {
 		h1 {
 			font-size: 1rem;
@@ -186,7 +186,7 @@ $medium-grey: #bfc0c0;
 				font-size: 1.3rem;
 			}
 		}
-		.iphone_gear_list {
+		.iphone_image {
 			margin-bottom: 0;
 			padding: 0 0;
 			.iphone_image {
