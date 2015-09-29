@@ -207,6 +207,18 @@ textarea {
 		h2 {
 			text-align: center;
 		}
+		p {
+			text-align: center;
+			color: darken($medium-grey, 15%);
+		}
+		a {
+			text-decoration: none;
+
+			color: darken($medium-grey, 25%);
+			&:hover {
+						color: lighten($dark, 20%);
+					}
+		}
 	} 
 }
 
