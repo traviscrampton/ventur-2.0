@@ -130,6 +130,34 @@ $medium-grey: #bfc0c0;
 	}
 }
 
+
+#how_it_works {
+	width: 100%;
+	padding: 3rem 0;
+	h2 {
+		font-size: 1.7rem;
+		text-align: center;
+		color: lighten($dark, 15%)
+	}
+	.col-md-4 {
+		text-align: center;
+		padding: 2rem 0;
+		i	{
+			color: lighten($dark, 55%);
+		}
+		h3 {
+			font-size: 1.2rem;
+			text-align: center;
+			color: lighten($dark, 15%)
+		}
+		p {
+			text-align: center;
+			font-size: 1.2rem;
+			font-weight: 300;
+			color: lighten($dark, 35%)
+		}
+	}
+}
 /* RESPONSIVE! */
 
 @media screen and (min-width: 1900px) {
@@ -193,6 +221,13 @@ $medium-grey: #bfc0c0;
 			.iphone_image {
     		width: 400px;
     	}
+		}
+	}
+	#how_it_works {
+		.col-md-4 {
+			width: 33.333%;
+			display: inline-block;
+			float: left;
 		}
 	}
 }

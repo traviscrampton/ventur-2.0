@@ -25,6 +25,8 @@ $medium-grey: #bfc0c0;
 @import 'normalize';
 @import 'journals';
 @import 'welcome';
+@import "font-awesome-sprockets";
+@import "font-awesome";
 
 .cf:after {
   content: ".";
