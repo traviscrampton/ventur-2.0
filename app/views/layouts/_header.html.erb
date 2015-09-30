@@ -1,19 +1,17 @@
-<% unless request.path == journals_path %>
-	<header id="main_header" class="cf">
-		<div class="wrapper_wide">
-			<%= link_to "ventur", root_path, id: "logo" %>
-			<nav>
-				<ul>
-					<% unless user_signed_in? %>
-						<li><%= link_to "Explore", journals_path %></li>
-						<li><%= link_to "Sign In", new_user_session_path %></li>
-						<!-- <li><%= link_to "Get Started", new_user_registration_path %></li> -->
-					<% else %>
-						<li><%= link_to "Sign Out", destroy_user_session_path, method: :delete %></li>
-						<li><%= link_to "New Journal", new_journal_path %></li>
-					<% end %>
-				</ul>
-			</nav>
-		</div>
-	</header>
-<% end %>
+<header id="main_header" class="cf">
+	<div class="wrapper_wide">
+		<%= link_to "ventur", root_path, id: "logo" %>
+		<nav>
+			<ul>
+				<% unless user_signed_in? %>
+					<li><%= link_to "Explore", journals_path %></li>
+					<li><%= link_to "Sign In", new_user_session_path %></li>
+					<!-- <li><%= link_to "Get Started", new_user_registration_path %></li> -->
+				<% else %>
+					<li><%= link_to "Sign Out", destroy_user_session_path, method: :delete %></li>
+					<li><%= link_to "New Journal", new_journal_path %></li>
+				<% end %>
+			</ul>
+		</nav>
+	</div>
+</header>
