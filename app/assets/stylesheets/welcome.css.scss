@@ -161,6 +161,18 @@ $medium-grey: #bfc0c0;
 
 #call_to_action {
 	text-align: center;
+	clear: both;
+	.button {
+		border: 3px solid $dark;
+		color: $dark;
+		background: transparent;
+		transition: .2s ease-in-out;
+		&:hover {
+			background: $dark;
+			border: 3px solid white;
+			color: white;
+		}
+	}
 	p {
 		color: lighten($dark, 45%);
 	}
@@ -245,6 +257,9 @@ $medium-grey: #bfc0c0;
 			float: left;
 		}
 	}
+	#call_to_action {
+		padding-top: 6rem;
+	}
 }
 
 @media screen and (min-width: 550px) {
@@ -273,3 +288,4 @@ $medium-grey: #bfc0c0;
 		}
 	}
 }
+
