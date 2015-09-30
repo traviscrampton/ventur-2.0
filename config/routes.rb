@@ -7,7 +7,13 @@ Rails.application.routes.draw do
   resources :users
   resources :journals
 
-  root 'welcome#index'
+  authenticated :user do
+    root to: "journals#index", as: :authenticated_root
+  end
+
+  unauthenticated do
+    root to: "welcome#index"
+  end
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
