@@ -165,6 +165,7 @@ $medium-grey: #bfc0c0;
 		color: lighten($dark, 45%);
 	}
 	a {
+		color: lighten($dark, 25%);
 		text-decoration: none;
 		transition: color .3s ease-in-out;
 		&:hover {
