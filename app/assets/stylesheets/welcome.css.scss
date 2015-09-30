@@ -158,6 +158,20 @@ $medium-grey: #bfc0c0;
 		}
 	}
 }
+
+#call_to_action {
+	text-align: center;
+	p {
+		color: lighten($dark, 45%);
+	}
+	a {
+		text-decoration: none;
+		transition: color .3s ease-in-out;
+		&:hover {
+			color: lighten($dark, 35%);
+		}
+	}
+}
 /* RESPONSIVE! */
 
 @media screen and (min-width: 1900px) {
