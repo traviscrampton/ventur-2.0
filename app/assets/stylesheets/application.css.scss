@@ -174,7 +174,7 @@ body {
 #footer {
 	.color: $highlight;
 	background: $white;
-	padding: 2.5rem 0;
+	padding: 2.5rem 0 .6rem 0;
 	text-align: center;
 	p {
 		color: darken($medium-grey, 22%);
@@ -187,6 +187,7 @@ body {
 			padding-top: .5rem;
 			text-transform: uppercase;
 			font-weight: 700;
+			font-size: .8rem;
 			text-decoration: none;
 			color: $medium-grey;
 			letter-spacing: 1px;
