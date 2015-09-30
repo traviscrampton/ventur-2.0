@@ -4,8 +4,9 @@
 
 $white: #FFFFFF;
 $highlight: #c6e2d9;
-$dark: #454243;
 $light: #EDEFF5;
+$dark: #454243;
+$medium-grey: #bfc0c0;
 
 
 #journals {
@@ -52,6 +53,18 @@ $light: #EDEFF5;
 					color: lighten($dark, 20%);
 				}
 			}
+		}
+	}
+}
+
+#journal_show {
+	a {
+		color: $medium-grey;
+		text-decoration: none;
+		padding: 0 0 0 .4rem;
+		transition: .2s ease-in-out;
+		&:hover {
+			color: darken($medium-grey, 15%);
 		}
 	}
 }
