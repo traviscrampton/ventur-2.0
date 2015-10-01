@@ -5,12 +5,11 @@
 		<nav>
 			<ul>
 				<% unless user_signed_in? %>
-					<li><%= link_to "Explore", journals_path %></li>
-					<li><%= link_to "Sign In", new_user_session_path %></li>
-					<!-- <li><%= link_to "Get Started", new_user_registration_path %></li> -->
+					<li><%= link_to "Login", new_user_session_path %></li>
+					<li><%= link_to "Get Started", new_user_registration_path %></li>
 				<% else %>
 					<li><%= link_to "Explore", journals_path %></li>
-					<li><%= link_to "Sign Out", destroy_user_session_path, method: :delete %></li>
+					<li><%= link_to "Logout", destroy_user_session_path, method: :delete %></li>
 				<% end %>
 			</ul>
 			</nav>
@@ -18,7 +17,7 @@
 	</header>
 	<h1>Better the world <br>
 	while you explore it</h1>
-	<%= link_to "Get started", new_user_registration_path, class: "button button_white" %>
+	<%= link_to "Explore", journals_path, class: "button button_white" %>
 </div>
 <div id="vision">
 	<div class="wrapper_wide">

@@ -1,7 +1,9 @@
 class JournalsController < ApplicationController
 	before_action :find_journal, only: [:show, :edit, :update, :destroy]
+	before_action :require_permission
 	before_action :authenticate_user!, except: [:index, :show]
 	before_filter :require_permission, only: [:edit, :update, :destroy]
+	
 	def index
 		@journals = Journal.all.order("created_at DESC")
 	end
@@ -24,7 +26,7 @@ class JournalsController < ApplicationController
 	end
 
 	def edit
-		@journal = Journal.find(params[:id])
+		@journal = current_user.journals.find(params[:id])
 	end
 
 	def update
