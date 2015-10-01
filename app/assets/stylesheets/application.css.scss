@@ -108,10 +108,12 @@ body {
 }
 
 .button_highlight {
+	border: 3px solid $dark;
+	color: $dark;
 	background: transparent;
-	transition: background .3s ease-in-out;
+	transition: .2s ease-in-out;
 	&:hover {
-		background: darken($highlight, 7.5%);
+		background: lighten(tomato, 7.5%);
 	}
 }
 
