@@ -19,7 +19,7 @@ $medium-grey: #bfc0c0;
 			width: 100%;
 			min-height: 18rem;
 			float: left;
-			margin: 0 0 2rem 0;
+			margin: 0 0;
 			-webkit-box-shadow: 0 1px 1px 0 rgba(0,0,0,0.2);
 			box-shadow: 0 1px 1px 0 rgba(0,0,0,0.2);
 			img { 
@@ -31,16 +31,27 @@ $medium-grey: #bfc0c0;
 				padding: 1rem 7.5%;
 				h2 {
 					font-weight: 700;
-					font-size: 1rem;
+					font-size: 1.2rem;
 					color: $dark;
 				}
 				p {
+					display: inline-block;
 					color: $dark;
+				}
+				.author {
+					padding-top: 3rem;
+					font-weight: 700;
+					color: lighten($dark, 20%);
+					font-size: .9rem;
+					transition: color .2s ease-in-out;
+					&:hover {
+						color: lighten($dark, 10%);
+					}
 				}
 				.chapter_count {
 					font-size: .8rem;
 					color: lighten($dark, 50%);
-					margin: .5rem 0 .25rem 0;
+					margin: 0 0 0 .4rem;
 				}
 			}
 			&:hover {
