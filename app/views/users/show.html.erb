@@ -1,0 +1,19 @@
+<div class="wrapper_wide">
+	<h1><%= @user.first_name %> <%= @user.last_name %></h1>
+</div>
+<div id="journals" class="cf">
+	<ul>
+		<% @user.journals.each do |journal| %>
+			<%= link_to journal do %>
+				<li>
+					<div class="journal_overview">
+						<h2><%= journal.title %></h2>
+						<p class="description"><%= truncate(journal.description, length: 140) %></p>
+						<p class="author"><%= journal.user.first_name %> <%= journal.user.last_name %></p>
+						<p class="chapter_count">2 Chapters</p>
+					</div>				
+				</li>
+			<% end %>
+		<% end %>
+	</ul>
+</div>
