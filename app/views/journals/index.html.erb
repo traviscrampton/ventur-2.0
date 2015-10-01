@@ -25,7 +25,7 @@
 					<div class="journal_overview">
 						<h2><%= journal.title %></h2>
 						<p class="description"><%= truncate(journal.description, length: 140) %></p>
-						<p class="author"><%= journal.user.first_name %> <%= journal.user.last_name %></p>
+						<p class="author"><%= link_to journal.user.first_name+' '+journal.user.last_name, user_path(journal) %></p>
 						<p class="chapter_count">2 Chapters</p>
 					</div>
 				</li>

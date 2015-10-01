@@ -29,9 +29,12 @@ $medium-grey: #bfc0c0;
 			}
 			.journal_overview {
 				padding: 1rem 7.5%;
+				a {
+					text-decoration: none;
+				}
 				h2 {
 					font-weight: 700;
-					font-size: 1.2rem;
+					font-size: 1rem;
 					color: $dark;
 				}
 				p {
@@ -40,12 +43,14 @@ $medium-grey: #bfc0c0;
 				}
 				.author {
 					padding-top: 3rem;
-					font-weight: 700;
-					color: lighten($dark, 20%);
-					font-size: .9rem;
-					transition: color .2s ease-in-out;
-					&:hover {
-						color: lighten($dark, 10%);
+					a {
+						font-weight: 700;
+						color: lighten($dark, 20%);
+						font-size: .9rem;
+						transition: color .2s ease-in-out;
+						&:hover {
+							color: lighten($dark, 10%);
+						}
 					}
 				}
 				.chapter_count {
