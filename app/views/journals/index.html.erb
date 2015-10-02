@@ -22,6 +22,7 @@
 		<% @journals.each do |journal| %>
 			<%= link_to journal do %>
 				<li>
+					<%= image_tag journal.journal_image.url(:medium) %>
 					<div class="journal_overview">
 						<h2><%= journal.title %></h2>
 						<p class="description"><%= truncate(journal.description, length: 140) %></p>

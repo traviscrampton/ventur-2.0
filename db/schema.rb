@@ -11,14 +11,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150930193003) do
+ActiveRecord::Schema.define(version: 20151002012626) do
 
   create_table "journals", force: :cascade do |t|
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at",                 null: false
+    t.datetime "updated_at",                 null: false
     t.string   "title"
     t.text     "description"
     t.integer  "user_id"
+    t.string   "journal_image_file_name"
+    t.string   "journal_image_content_type"
+    t.integer  "journal_image_file_size"
+    t.datetime "journal_image_updated_at"
   end
 
   add_index "journals", ["user_id"], name: "index_journals_on_user_id"
@@ -39,6 +43,10 @@ ActiveRecord::Schema.define(version: 20150930193003) do
     t.string   "first_name"
     t.string   "last_name"
     t.text     "bio"
+    t.string   "profile_file_name"
+    t.string   "profile_content_type"
+    t.integer  "profile_file_size"
+    t.datetime "profile_updated_at"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true
