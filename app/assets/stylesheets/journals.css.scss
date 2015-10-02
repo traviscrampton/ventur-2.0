@@ -60,11 +60,7 @@ $medium-grey: #bfc0c0;
 				}
 			}
 			&:hover {
-				img { 
-					opacity: .98;
-					transition: .2s ease-in-out;
-				}
-				h2 {
+				h2, p {
 					transition: color .2s ease-in-out;
 					color: lighten($dark, 20%);
 				}
