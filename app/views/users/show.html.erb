@@ -1,16 +1,20 @@
 <div class="wrapper_wide">
 	<%= image_tag @user.profile.url(:medium), class: "profile_img" %>
 	<h1><%= @user.first_name %> <%= @user.last_name %></h1>
+	<% if @user == current_user %>
+		<p><%= link_to "Edit Profile Pic", edit_user_registration_path %></p>
+	<% end %>
 </div>
 <div id="journals" class="cf">
 	<ul>
 		<% @user.journals.each do |journal| %>
 			<%= link_to journal do %>
 				<li>
+					<%= image_tag journal.journal_image.url(:medium) %>
 					<div class="journal_overview">
 						<h2><%= journal.title %></h2>
 						<p class="description"><%= truncate(journal.description, length: 140) %></p>
-						<p class="author"><%= journal.user.first_name %> <%= journal.user.last_name %></p>
+						<p class="author"><%= link_to journal.user.first_name+' '+journal.user.last_name, journal.user %></p>
 						<p class="chapter_count">2 Chapters</p>
 					</div>				
 				</li>
