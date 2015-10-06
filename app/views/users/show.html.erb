@@ -2,7 +2,7 @@
 	<%= image_tag @user.profile.url(:medium), class: "profile_img" %>
 	<h1><%= @user.first_name %> <%= @user.last_name %></h1>
 	<% if @user == current_user %>
-		<p><%= link_to "Edit Profile Pic", edit_user_registration_path %></p>
+		<p><%= link_to "Edit Account", edit_user_registration_path %></p>
 	<% end %>
 </div>
 <div id="journals" class="cf">
