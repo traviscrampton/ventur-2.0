@@ -1,10 +1,11 @@
 <div id="profile_cover">
-	<div class="wrapper">
+	<div class="info">
 		<%= image_tag @user.profile.url(:medium), class: "profile_img" %>
 		<h1><%= @user.first_name %> <%= @user.last_name %></h1>
 		<p>126 Followers</p>
 		<br>
-		<p>2 Journals |</p>
+		<p>2 Journals</p>
+		<p> | </p>
 		<p>1 Gear List</p>
 		<br>
 		<p class="funds">$144 ready to donate</p>
