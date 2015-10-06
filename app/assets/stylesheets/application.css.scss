@@ -271,20 +271,72 @@ textarea {
 
 
 /* PROFILE */
-.wrapper_wide {
-	.profile_img {
-		border: 5px solid $medium-grey;
-		border-radius: 50%;
-		width: 10rem;
+#profile_cover {
+	background-image: linear-gradient(#000 -95%, transparent 99.9%),
+	image-url("camp.jpg");
+	background-size: absolute;
+	background-repeat: no-repeat;
+	background-position: center;
+	min-width: 100%;
+	min-height: 26rem;
+	.wrapper {
+		text-align: center;
+		.profile_img {
+			margin-top: 2rem;
+			border: 5px solid $medium-grey;
+			border-radius: 50%;
+			width: 8rem;
+		}
+		h1 {
+			color: $white;
+		} 
+		p {
+			display: inline-block;
+			padding-left: .5rem;
+			margin-top: -.6rem;
+			color: lighten($dark, 17%);
+			transition: color .2s ease-in-out;
+			&:hover {
+				color: lighten($dark, 23%);
+			}
+		}
+		.funds {
+			color: lighten($dark, 37%);
+			transition: color .2s ease-in-out;
+			&:hover {
+				color: lighten($dark, 43%);
+			}
+		}
 	}
 }
 
 
 /* RESPONSIVE! */
+@media screen and (min-width: 920px) {
+  #profile_cover {
+  	background-size: cover;
+  }
+}
+
 @media screen and (min-width: 780px) {
 	#form {
 		.wrapper_skinny {
 			width: 40%;
+		}
+	}
+	#profile_cover {
+		.wrapper {
+			float: left;
+			padding-left: 10%;
+			text-align: left;
+			.profile_img {
+				margin-top: 2rem;
+				width: 9rem;
+			}
+			p {
+				padding: .2rem 0;
+				margin: 0 0;
+			}
 		}
 	}
 }

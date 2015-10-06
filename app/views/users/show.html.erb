@@ -1,9 +1,15 @@
-<div class="wrapper_wide">
-	<%= image_tag @user.profile.url(:medium), class: "profile_img" %>
-	<h1><%= @user.first_name %> <%= @user.last_name %></h1>
-	<% if @user == current_user %>
-		<p><%= link_to "Edit Account", edit_user_registration_path %></p>
-	<% end %>
+<div id="profile_cover">
+	<div class="wrapper">
+		<%= image_tag @user.profile.url(:medium), class: "profile_img" %>
+		<h1><%= @user.first_name %> <%= @user.last_name %></h1>
+		<p>126 Followers</p>
+		<br>
+		<p>2 Journals |</p>
+		<p>1 Gear List</p>
+		<br>
+		<p class="funds">$144 ready to donate</p>
+		
+	</div> 
 </div>
 <div id="journals" class="cf">
 	<ul>
