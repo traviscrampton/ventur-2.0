@@ -9,8 +9,8 @@
 						<li><%= link_to "Get Started", new_user_registration_path %></li>
 					<% else %>
 						<li><%= link_to "Logout", destroy_user_session_path, method: :delete %></li>
-						<li><%= link_to "My Profile", current_user %></li>
-						<li><%= link_to "Account Settings", edit_user_registration_path %></li>
+						<li><%= link_to "Profile", current_user %></li>
+						<li><%= link_to "Settings", edit_user_registration_path %></li>
 						<li><%= link_to "New Journal", new_journal_path %></li>
 					<% end %>
 				</ul>
