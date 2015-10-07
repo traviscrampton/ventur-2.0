@@ -11,8 +11,7 @@ class User < ActiveRecord::Base
   		medium: "300x300#", 
   		thumb: "150x150#" }, 
   		default_url: "profile_img_default.png"
-  		storage: :s3,
-    	s3_credentials: "#{Rails.root}/config/s3.yml"
+  		
   validates_attachment_content_type :profile, 
   	content_type: /\Aimage\/.*\Z/
 end
