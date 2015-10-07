@@ -10,8 +10,8 @@ class User < ActiveRecord::Base
   		large: "600x600>", 
   		medium: "300x300#", 
   		thumb: "150x150#" }, 
-  		default_url: "profile_img_default.png"
-  		
+  		default_url: "knapsack_logo.png"
+
   validates_attachment_content_type :profile, 
   	content_type: /\Aimage\/.*\Z/
 end
