@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-
+ruby '2.0.0'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.2'
 # Use SCSS for stylesheets
@@ -24,6 +24,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'devise', '~> 3.5.2'
 gem 'font-awesome-sass'
 gem "paperclip", "~> 4.3"
+gem 'aws-s3'
 gem 'aws-sdk', '< 2.0'
 
 # Use ActiveModel has_secure_password
