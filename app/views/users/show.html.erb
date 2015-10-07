@@ -4,7 +4,7 @@
 		<h1><%= @user.first_name %> <%= @user.last_name %></h1>
 		<p>126 Followers</p>
 		<br>
-		<p>2 Journals</p>
+		<p><%= pluralize(@user.journals.count, 'Journal') %></p>
 		<p> | </p>
 		<p>1 Gear List</p>
 		<br>
