@@ -20,12 +20,10 @@
 	</div>
 <% end %>
 
-<div id="panel-example">
-	<a href="#" class="toggle-panel">Toggle Panel</a>
-  <% unless current_page?(root_path) %>
-		<%= render 'layouts/header' %>
-	<% end %>
-</div>
+<% unless current_page?(root_path) %>
+	<%= render 'layouts/header' %>
+<% end %>
+
 
 
 <%= yield %>
@@ -33,6 +31,16 @@
 <%= render 'layouts/footer' %>
 
 <script>
+
+	$('#panel-example').scotchPanel({
+    containerSelector: 'body', // As a jQuery Selector
+    direction: 'right', // Make it toggle in from the left
+    duration: 300, // Speed in ms how fast you want it to be
+    transition: 'ease', // CSS3 transition type: linear, ease, ease-in, ease-out, ease-in-out, cubic-bezier(P1x,P1y,P2x,P2y)
+    clickSelector: '.toggle-panel', // Enables toggling when clicking elements of this class
+    distanceX: '40%', // Size fo the toggle
+    enableEscapeKey: true // Clicking Esc will close the panel
+	});
 	$(document).ready(function(){
 		setTimeout(function() {
 			$('#notice_wrapper').fadeOut("slow", function() {

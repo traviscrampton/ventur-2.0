@@ -147,7 +147,7 @@ body {
 #main_header {
 	color: $highlight;
 	background: $white;
-	padding: 2.5rem 0;
+	padding: 2.2rem 0;
 	#logo {
 		float: left;
 		text-transform: uppercase;
@@ -155,14 +155,25 @@ body {
 		text-decoration: none;
 		color: $dark;
 		letter-spacing: 3px;
+		padding-top: .4rem;
+	}
+	.toggle-panel {
+		float: right;
+		font-size: 1rem;
+		i {
+			color: lighten($dark, 22%);
+		}
 	}
 	nav {
 		float: right;
+		background: lighten($dark, 60%);
 		ul {
 			list-style: none;
+			padding: 6rem 2rem;
 			margin: 0 -.3rem;
 			li {
-				display: inline;
+				display: block;
+				padding: .5rem 0;
 				margin-left: .4rem;
 				a {
 					color: $dark;
@@ -172,6 +183,15 @@ body {
 						color: lighten($dark, 20%);
 					}
 				}
+			}
+		}
+	}
+	.user_not_logged_in {
+		background: $white;
+		ul {
+			padding: 0 0;
+			li {
+				display: inline-block;
 			}
 		}
 	}

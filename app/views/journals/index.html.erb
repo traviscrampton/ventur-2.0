@@ -2,7 +2,8 @@
 	<header id="main_header" class="cf">
 		<div class="wrapper_wide">
 			<%= link_to "ventur", root_path, id: "logo" %>
-			<nav>
+			<a href="#" class="toggle-panel"><i class="fa fa-bars fa-2x"></i></a>
+			<nav id="panel-example">
 				<ul>
 					<% unless user_signed_in? %>
 						<li><%= link_to "Login", new_user_session_path %></li>
