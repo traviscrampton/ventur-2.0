@@ -20,9 +20,13 @@
 	</div>
 <% end %>
 
-<% unless current_page?(root_path) %>
-	<%= render 'layouts/header' %>
-<% end %>
+<div id="panel-example">
+	<a href="#" class="toggle-panel">Toggle Panel</a>
+  <% unless current_page?(root_path) %>
+		<%= render 'layouts/header' %>
+	<% end %>
+</div>
+
 
 <%= yield %>
 

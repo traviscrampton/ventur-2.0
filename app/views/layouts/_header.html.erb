@@ -1,18 +1,21 @@
-<header id="main_header" class="cf">
-	<div class="wrapper_wide">
-		<%= link_to "ventur", root_path, id: "logo" %>
-		<nav>
-			<ul>
-				<% unless user_signed_in? %>
-					<li><%= link_to "Login", new_user_session_path %></li>
-					<li><%= link_to "Get Started", new_user_registration_path %></li>
-				<% else %>
-					<li><%= link_to "Logout", destroy_user_session_path, method: :delete %></li>
-					<li><%= link_to "Profile", current_user %></li>
-					<li><%= link_to "Settings", edit_user_registration_path %></li>
-					<li><%= link_to "New Journal", new_journal_path %></li>
-				<% end %>
-			</ul>
-		</nav>
-	</div>
-</header>
+<div id="panel-example">
+	<a href="#" class="toggle-panel">Toggle Panel</a>
+	<header id="main_header" class="cf">
+		<div class="wrapper_wide">
+			<%= link_to "ventur", root_path, id: "logo" %>
+			<nav>
+				<ul>
+					<% unless user_signed_in? %>
+						<li><%= link_to "Login", new_user_session_path %></li>
+						<li><%= link_to "Get Started", new_user_registration_path %></li>
+					<% else %>
+						<li><%= link_to "Logout", destroy_user_session_path, method: :delete %></li>
+						<li><%= link_to "Profile", current_user %></li>
+						<li><%= link_to "Settings", edit_user_registration_path %></li>
+						<li><%= link_to "New Journal", new_journal_path %></li>
+					<% end %>
+				</ul>
+			</nav>
+		</div>
+	</header>
+</div>
