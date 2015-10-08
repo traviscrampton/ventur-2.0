@@ -12,6 +12,7 @@
 			</p>
 			<p class="chapter_count">2 Chapters</p>
 			<% if current_user == @journal.user %>	
+				<%= link_to "Add a chapter", new_user_registration_path, class: " button button_dark" %>
 				<%= link_to "edit", edit_journal_path(@journal) %>
 				<%= link_to "delete", journal_path(@journal), method: :delete, data: {confirm: "Are you sure you want to delete this Journal?"} %>
 			<% end %>

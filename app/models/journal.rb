@@ -3,7 +3,7 @@ class Journal < ActiveRecord::Base
 
 	has_attached_file :journal_image,
 	styles: { 
-		large: "600x600>", 
+		large: "600x600#", 
 		medium: "550x550#", 
 		thumb: "150x150#" }
 
