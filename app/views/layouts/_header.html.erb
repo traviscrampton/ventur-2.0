@@ -12,10 +12,10 @@
 		<a href="#" class="toggle-panel"><i class="fa fa-bars fa-2x"></i></a>			
 		<nav id="panel-example">
 				<ul>
-					<li><%= link_to "Logout", destroy_user_session_path, method: :delete %></li>
 					<li><%= link_to "Profile", current_user %></li>
 					<li><%= link_to "Settings", edit_user_registration_path %></li>
 					<li><%= link_to "New Journal", new_journal_path %></li>
+					<li><%= link_to "Logout", destroy_user_session_path, method: :delete %></li>
 				</ul>
 			</nav>
 		<% end %>
