@@ -76,7 +76,7 @@ $medium-grey: #bfc0c0;
 	a {
 		color: $medium-grey;
 		text-decoration: none;
-		padding: 0 0 0 .4rem;
+		padding: 0;
 		transition: .2s ease-in-out;
 		&:hover {
 			color: darken($medium-grey, 15%);
