@@ -1,4 +1,4 @@
 <%= form_for([@gear_list, @gear_list.gear_items.build]) do |f| %>
-	<%= f.text_field :gear_item, placeholder: "Add a gear item" %>
-	<%= f.submit %>
+	<%= f.text_field :item_name, placeholder: "MSR Whisperlight Stove, Patagonia Nanopuff Jacket etc." %>
+	<%= f.submit "Add Gear Item", class: "button button_dark" %>
 <% end %>

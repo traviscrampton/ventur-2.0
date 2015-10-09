@@ -10,7 +10,11 @@ before_action :set_gear_list
 	private
 
 		def set_gear_list
-			@gear_list = Gearlist.find(params[:gear_list_id])
+			@gear_list = GearList.find(params[:gear_list_id])
+		end
+
+		def set_gear_item
+			@gear_item = @gear_list.gear_items.find(params[:id])
 		end
 
 		def gear_item_params
