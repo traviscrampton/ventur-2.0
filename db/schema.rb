@@ -11,7 +11,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151002012626) do
+ActiveRecord::Schema.define(version: 20151009000428) do
+
+  create_table "gear_lists", force: :cascade do |t|
+    t.string   "title"
+    t.integer  "journal_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "gear_lists", ["journal_id"], name: "index_gear_lists_on_journal_id"
 
   create_table "journals", force: :cascade do |t|
     t.datetime "created_at",                 null: false

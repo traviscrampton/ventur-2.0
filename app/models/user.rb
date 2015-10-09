@@ -4,6 +4,7 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable, password_length: 6..128
   has_many :journals, dependent: :destroy
+  has_many :gear_lists, dependent: :destroy
 
   has_attached_file :profile, 
   	styles: { 
