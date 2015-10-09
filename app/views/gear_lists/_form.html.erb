@@ -1,0 +1,8 @@
+<div id="form">
+  <div class="wrapper">
+		<%= form_for(@gear_list) do |f| %>
+			<%= f.text_field :title, placeholder: "Name this list" %>
+			<%= f.submit "Create Gear List", class: "button button_dark" %>
+		<% end %>
+	</div>
+</div>

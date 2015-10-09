@@ -7,7 +7,9 @@ Rails.application.routes.draw do
 
   # You can have the root of your site routed with "root"
   resources :journals
-  resources :gear_lists
+  resources :gear_lists do
+    resources :gear_items
+  end
 
   authenticated :user do
     root to: "journals#index", as: :authenticated_root
