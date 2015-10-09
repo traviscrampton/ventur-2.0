@@ -40,6 +40,12 @@ body {
 	font-family: 'Lato', sans-serif;
 }
 
+.text_muted {
+	color: lighten($dark, 50%);
+	font-weight: 300;
+	font-size: 1.2rem;
+}
+
 .wrapper_wide {
 	width: 90%;
 	margin: 0 auto;
