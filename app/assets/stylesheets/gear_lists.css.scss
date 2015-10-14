@@ -5,6 +5,12 @@ $light: #EDEFF5;
 $light-grey: #EFF0F0;
 $medium-grey: #bfc0c0;
 
+#new_gear_list {
+	p {
+		width: 90%;
+		margin: 0 auto;
+	}
+}
 .gear_list_title {
 	text-align: left;
 	font-weight: 700;
@@ -58,16 +64,36 @@ $medium-grey: #bfc0c0;
 }
 
 #form {
-		text-align: center;
-		p {
-			margin: 3rem 0 0 0;
-		}
+	text-align: center;
+	p {
+		margin: 3rem 0 0 0;
+	}
+	input[type="text"] {
+		margin: .8rem auto 0 auto;
+		width: 100%;
+	}
+	.button {
+		margin: 0 auto;
+		padding: .7rem .9rem;
+		margin-top: 2rem;
+	}
+}
+
+@media screen and (min-width: 625px) {
+	#new_gear_list {
+	p {
+		width: 50%;
+		margin: 0 auto;
+	}
+}
+	#form {
 		input[type="text"] {
-			margin: .8rem auto 0 auto;
-			width: 80%;
+		width: 50%;
 		}
 		.button {
-			padding: .7rem .9rem;
-			margin-top: 2rem;
+			display: block;
+			padding-top: .6rem; 
 		}
 	}
+}
+
