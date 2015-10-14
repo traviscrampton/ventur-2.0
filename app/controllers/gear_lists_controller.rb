@@ -6,6 +6,7 @@ before_action :set_gear_list, only: [:show, :edit, :update, :destroy]
 	end 
 
 	def show
+		
 	end
 
 	def new

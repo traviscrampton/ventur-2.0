@@ -1,6 +1,8 @@
-<% @gear_lists.each do |gear_list| %>
-	<div class="index_row cf">
-		<div class="gear_list_title"> <%= link_to gear_list.title, gear_list %>
+<div class="wrapper_wide">
+	<% @gear_lists.each do |gear_list| %>
+		<div class="index_row cf">
+			<h2 class="gear_list_title"><%= link_to gear_list.title, gear_list %>
+			</h2>
 		</div>
-	</div>
-<% end %>
+	<% end %>
+</div>

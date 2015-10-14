@@ -1,9 +1,8 @@
-<div class="wrapper">
-
+<div class="gear_item">
 	<p><%= gear_item.item_name %></p>
 	<div class="trash">
 		<%= link_to gear_list_gear_item_path(@gear_list, gear_item.id),
-			method: :delete, data: { confirm: "Are you sure?" } do %>
+			method: :delete do %>
 			<i class="fa fa-trash"></i>
 		<% end %>
 	</div>

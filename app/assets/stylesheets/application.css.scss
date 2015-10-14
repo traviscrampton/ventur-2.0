@@ -27,6 +27,7 @@ $medium-grey: #bfc0c0;
 @import 'welcome';
 @import "font-awesome-sprockets";
 @import "font-awesome";
+@import "gear_lists";
 
 .cf:after {
   content: ".";
@@ -140,8 +141,19 @@ body {
 	transition: .2s ease-in-out;
 	&:hover {
 		background: $dark;
-		border: 3px solid white;
+		border: 3px solid $dark;
 		color: white;
+	}
+}
+
+.button_fade {
+	border: 3px solid darken($medium-grey, 30%);
+	color: darken($medium-grey, 30%);
+	background: transparent;
+	transition: .2s ease-in-out;
+	&:hover {
+		border: 3px solid darken($medium-grey, 40%);
+		color: darken($medium-grey, 40%);
 	}
 }
 

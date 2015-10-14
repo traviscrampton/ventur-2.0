@@ -1,0 +1,73 @@
+$white: #FFFFFF;
+$highlight: #c6e2d9;
+$dark: #454243;
+$light: #EDEFF5;
+$light-grey: #EFF0F0;
+$medium-grey: #bfc0c0;
+
+.gear_list_title {
+	text-align: left;
+	font-weight: 700;
+	font-size: 1.3rem;
+	text-transform: none;
+	color: white;
+	margin: .5rem 0;
+	padding-bottom: .6rem;
+	border-bottom: 1px solid $light-grey;
+	a {
+		text-decoration: none;
+		color: $dark;
+		transition: all .2s ease-in-out;
+		&:hover {
+			opacity: 0.8;
+		}
+	}
+}
+
+#gear_items_wrapper {
+	h1 {
+		padding-bottom: 1rem;
+	}
+	.gear_item {
+		display: inline-block;
+		width: 100%;
+		border-bottom: 1px solid $medium-grey;
+		p {
+			margin: 0;
+			float: left;
+			padding: 1em;
+			font-weight: 300;
+			color: $dark;
+		}
+		.trash {
+			width: 10%;
+			text-align: center;
+			border-left: 1px solid $medium-grey;
+			padding: 1em 0;
+			float: right;
+			i {
+				color: $dark;
+				transition: .2s ease-in-out;
+				&:hover
+				{
+					color: lighten($dark, 20%);
+				}
+			}
+		}
+	}
+}
+
+#form {
+		text-align: center;
+		p {
+			margin: 3rem 0 0 0;
+		}
+		input[type="text"] {
+			margin: .8rem auto 0 auto;
+			width: 80%;
+		}
+		.button {
+			padding: .7rem .9rem;
+			margin-top: 2rem;
+		}
+	}
