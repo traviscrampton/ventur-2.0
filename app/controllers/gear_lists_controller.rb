@@ -19,7 +19,7 @@ before_action :set_gear_list, only: [:show, :edit, :update, :destroy]
 		@gear_list = GearList.new(gear_list_params)
 
 		if @gear_list.save
-			redirect_to root_path
+			redirect_to @gear_list
 		else
 			render 'new'
 		end
@@ -27,7 +27,7 @@ before_action :set_gear_list, only: [:show, :edit, :update, :destroy]
 
 	def destroy
 		@gear_list.destroy
-		render 'new'
+		redirect_to root_path
 	end
 
 	private
