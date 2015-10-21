@@ -42,7 +42,7 @@ body {
 }
 
 .text_muted {
-	color: lighten($dark, 50%);
+	color: lighten($dark, 30%);
 	font-weight: 300;
 	font-size: 1.2rem;
 }
@@ -349,6 +349,24 @@ textarea {
 	}
 }
 
+
+/* ERROR MESSAGES */
+#error_explanation {
+	text-align: center;
+	padding: 2rem 4rem;
+	width: 30%;
+	margin: 0 auto;
+	display: inline-block;
+	background: rgba(208,103,82, 0.8);
+	ul {
+		margin: 0 auto;
+		li {
+			list-style: none;
+			font-size: 1.2rem;
+			color: white;
+		}
+	}
+}
 
 /* RESPONSIVE! */
 @media screen and (min-width: 920px) {
