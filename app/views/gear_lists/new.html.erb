@@ -3,6 +3,7 @@
 		<h1>Share what you brought to make your trip happen.</h1>
 		<hr class="hr_short">
 		<p class="text_muted">This enables others to gear up for their own adventures, while passively raising money for a cause of your choice!</p>
+<<<<<<< HEAD
 	<% if @gear_list.errors.any? %>
 		<div id="error_explanation">
 			<ul>
@@ -12,6 +13,17 @@
 			</ul>
 		</div>
 	<% end %>
+=======
+		<% if @gear_list.errors.any? %>
+	  	<div id="error_explanation">
+		    <ul>
+		    <% @gear_list.errors.full_messages.each do |msg| %>
+		      <li><%= msg %></li>
+		    <% end %>
+		    </ul>
+		  </div>
+		<% end %>
+>>>>>>> gear-list
 	</div>
 	<div>
 		<div id="add_gear_items">

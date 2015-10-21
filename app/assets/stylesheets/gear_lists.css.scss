@@ -5,12 +5,6 @@ $light: #EDEFF5;
 $light-grey: #EFF0F0;
 $medium-grey: #bfc0c0;
 
-#new_gear_list {
-	p {
-		width: 90%;
-		margin: 0 auto;
-	}
-}
 .gear_list_title {
 	text-align: left;
 	font-weight: 700;
@@ -31,8 +25,18 @@ $medium-grey: #bfc0c0;
 }
 
 #gear_items_wrapper {
+	text-align: center;
 	h1 {
-		padding-bottom: 1rem;
+		padding: 0 0 1rem 0;
+	}
+	a {
+		color: darken($medium-grey, 15%);
+		text-decoration: none;
+		padding: 0;
+		transition: .2s ease-in-out;
+		&:hover {
+			color: $dark;
+		}
 	}
 	.gear_item {
 		display: inline-block;
@@ -63,36 +67,18 @@ $medium-grey: #bfc0c0;
 	}
 }
 
-#add_gear_items {
-	text-align: center;
-	p {
-		margin: 3rem 0 0 0;
-		color: $medium-grey;
-	}
-	input[type="text"] {
-		margin: .8rem auto 0 auto;
-		width: 100%;
-	}
-	.button {
-		margin: 2rem auto 8rem auto;
-		padding: .7rem .9rem;
-	}
-}
-
-@media screen and (min-width: 625px) {
-	#new_gear_list {
-	p {
-		width: 50%;
-		margin: 0 auto;
-	}
-}
-	#add_gear_items {
+#form {
+		text-align: center;
+		p {
+			margin: 3rem 0 0 5.5rem;
+			text-align: left;
+		}
 		input[type="text"] {
-		width: 50%;
+			margin: .8rem auto 0 auto;
+			width: 80%;
 		}
 		.button {
-			display: block;
+			padding: .7rem .9rem;
+			margin-top: 2rem;
 		}
 	}
-}
-

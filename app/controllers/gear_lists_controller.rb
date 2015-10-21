@@ -6,7 +6,6 @@ before_action :set_gear_list, only: [:show, :edit, :update, :destroy]
 	end 
 
 	def show
-		
 	end
 
 	def new
@@ -24,6 +23,11 @@ before_action :set_gear_list, only: [:show, :edit, :update, :destroy]
 		else
 			render 'new'
 		end
+	end
+
+	def destroy
+		@gear_list.destroy
+		render 'new'
 	end
 
 	private

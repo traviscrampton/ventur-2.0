@@ -1,5 +1,9 @@
 
 <%= form_for([@gear_list, @gear_list.gear_items.build]) do |f| %>
+<<<<<<< HEAD
 	<%= f.text_field :item_name, autofocus: true, placeholder: "Patagonia Jacket etc." %>
+=======
+	<%= f.text_field :item_name, placeholder: "Patagonia Nanopuff Jacket etc." %>
+>>>>>>> gear-list
 	<%= f.submit "Add Gear Item", class: "button button_block button_fade" %>
 <% end %>
