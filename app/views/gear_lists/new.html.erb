@@ -1,8 +1,17 @@
 <div id="new_gear_list" class="wrapper_wide">
 	<div class="center">
-		<h1>What did you bring on your ventur?</h1>
+		<h1>Share what you brought to make your trip happen.</h1>
 		<hr class="hr_short">
-		<p class="text_muted">Share what you brought to make your trip happen. This enables others to gear up for their own adventures, while passively raising money for a cause of your choice!</p>
+		<p class="text_muted">This enables others to gear up for their own adventures, while passively raising money for a cause of your choice!</p>
+		<% if @gear_list.errors.any? %>
+	  	<div id="error_explanation">
+		    <ul>
+		    <% @gear_list.errors.full_messages.each do |msg| %>
+		      <li><%= msg %></li>
+		    <% end %>
+		    </ul>
+		  </div>
+		<% end %>
 	</div>
 	<div class="wrapper_skinny">
 		<div id="form">

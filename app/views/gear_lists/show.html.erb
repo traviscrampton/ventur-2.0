@@ -6,5 +6,7 @@
 			<p>Add items to your gear list:</p>
 			<%= render 'gear_items/form' %>
 		</div>
+		<%= link_to "Delete gear list", gear_list_path(@gear_list),
+			method: :delete, data: { confirm: "Are you sure?" } %>
 	</div>
 </div>

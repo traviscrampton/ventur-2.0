@@ -25,8 +25,18 @@ $medium-grey: #bfc0c0;
 }
 
 #gear_items_wrapper {
+	text-align: center;
 	h1 {
-		padding-bottom: 1rem;
+		padding: 0 0 1rem 0;
+	}
+	a {
+		color: darken($medium-grey, 15%);
+		text-decoration: none;
+		padding: 0;
+		transition: .2s ease-in-out;
+		&:hover {
+			color: $dark;
+		}
 	}
 	.gear_item {
 		display: inline-block;
@@ -60,7 +70,8 @@ $medium-grey: #bfc0c0;
 #form {
 		text-align: center;
 		p {
-			margin: 3rem 0 0 0;
+			margin: 3rem 0 0 5.5rem;
+			text-align: left;
 		}
 		input[type="text"] {
 			margin: .8rem auto 0 auto;
