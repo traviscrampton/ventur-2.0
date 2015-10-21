@@ -353,15 +353,15 @@ textarea {
 /* ERROR MESSAGES */
 #error_explanation {
 	text-align: center;
-	padding: 2rem 4rem;
+	padding: 1.5rem 3rem;
+	margin: 2rem auto;
 	width: 30%;
-	margin: 0 auto;
 	display: inline-block;
 	background: rgba(208,103,82, 0.8);
 	ul {
-		margin: 0 auto;
 		li {
 			list-style: none;
+			margin-left: -3rem;
 			font-size: 1.2rem;
 			color: white;
 		}
