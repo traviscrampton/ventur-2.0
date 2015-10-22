@@ -67,26 +67,40 @@ $medium-grey: #bfc0c0;
 		}
 	}
 }
-
-#gear_form {
+#gear_list_form {
 	text-align: center;
 	background: lighten($medium-grey, 20%);
-  padding: 3rem;
+  padding: 5rem 0;
 	margin: 3rem 0 3rem 0;
-	input[type="text"], textarea {
-	background: $white;
+	input[type="text"] {
+		background: $white;
+		margin: 0 auto 3rem auto;
+		width: 100%;
 	}
 	p {
 		margin: 3rem 0 0 0;
 		text-align: center;
 	}
+	.button {
+		padding: .7rem .9rem;
+	}
+}
+#gear_items_form {
+	text-align: center;
+	background: lighten($medium-grey, 20%);
+  padding: 2rem 0;
+	margin: 3rem 0 3rem 0;
 	input[type="text"] {
-		margin: .8rem auto 0 auto;
+		background: $white;
+		margin: 0 auto 1rem auto;
 		width: 80%;
+	}
+	p {
+		text-align: center;
 	}
 	.button {
 		padding: .7rem .9rem;
-		margin-top: 2rem;
+		margin: 2rem auto;
 	}
 }
 .delete {
@@ -97,6 +111,15 @@ $medium-grey: #bfc0c0;
 		transition: .2s ease-in-out;
 		&:hover {
 			color: tomato;
+		}
+	}
+}
+
+/* RESPONSIVE */
+@media screen and (min-width: 625px) {
+		#gear_items_form {
+		input[type="text"] {
+			width: 50%;
 		}
 	}
 }
