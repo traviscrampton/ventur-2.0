@@ -271,6 +271,11 @@ button:focus {
 	border: 3px solid white;
 	color: white;
 }
+.button_fade:focus {
+	outline: none;
+	border: 3px solid darken($medium-grey, 40%);
+	color: darken($medium-grey, 40%);
+}
 
 textarea {
 	min-height: 8rem;
