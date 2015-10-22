@@ -2,11 +2,16 @@
 	<div id="gear_items_wrapper">
 		<h1 class="center"><%= @gear_list.title %></h1>
 		<%= render @gear_list.gear_items %>
-		<div id="form">
-			<p>Add items to your gear list:</p>
-			<%= render 'gear_items/form' %>
-		</div>
-		<%= link_to "Delete gear list", gear_list_path(@gear_list),
-			method: :delete, data: { confirm: "Are you sure?" } %>
 	</div>
 </div>
+<% if current_user == @gear_list.user %>
+	<div id="gear_form">
+		<p>Add items to your gear list:</p>
+		<%= render 'gear_items/form' %>
+	</div>
+	<div class="wrapper center delete">
+		<%= link_to "Delete gear list", gear_list_path(@gear_list),
+		method: :delete, data: { confirm: "Are you sure you want to delete this gear list?" } %>
+	</div>
+<% end %>
+	

@@ -1,5 +1,6 @@
 class GearListsController < ApplicationController
 before_action :set_gear_list, only: [:show, :edit, :update, :destroy]
+before_filter :require_permission, only: [:edit, :destroy]
 
 	def index
 		@gear_lists = GearList.all
@@ -9,14 +10,17 @@ before_action :set_gear_list, only: [:show, :edit, :update, :destroy]
 	end
 
 	def new
-		@gear_list = GearList.new
+		@gear_list = current_user.gear_lists.build
 	end
 
 	def edit
 	end
 
+	def update
+	end
+
 	def create
-		@gear_list = GearList.new(gear_list_params)
+		@gear_list = current_user.gear_lists.build(gear_list_params)
 
 		if @gear_list.save
 			redirect_to @gear_list
@@ -27,7 +31,7 @@ before_action :set_gear_list, only: [:show, :edit, :update, :destroy]
 
 	def destroy
 		@gear_list.destroy
-		render 'new'
+		redirect_to root_path
 	end
 
 	private
@@ -38,5 +42,11 @@ before_action :set_gear_list, only: [:show, :edit, :update, :destroy]
 
 		def gear_list_params
 			params[:gear_list].permit(:title)
+		end
+
+		def require_permission
+			if current_user != GearList.find(params[:id]).user
+				redirect_to root_path
+			end
 		end
 end
