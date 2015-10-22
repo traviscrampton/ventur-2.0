@@ -68,34 +68,6 @@ $medium-grey: #bfc0c0;
 	}
 }
 
-<<<<<<< HEAD
-#gear_form {
-		text-align: center;
-		p {
-			margin: 3rem 0 0 5.5rem;
-			text-align: left;
-		}
-		input[type="text"] {
-			margin: .8rem auto 0 auto;
-			width: 80%;
-		}
-		.button {
-			padding: .7rem .9rem;
-			margin-top: 2rem;
-=======
-.delete {
-	a {
-		color: darken($medium-grey, 15%);
-		text-decoration: none;
-		padding: 1rem 1rem;
-		transition: .2s ease-in-out;
-		&:hover {
-			color: tomato;
->>>>>>> gear-list
-		}
-	}
-}
-
 #gear_form {
 	text-align: center;
 	background: lighten($medium-grey, 20%);
@@ -105,7 +77,8 @@ $medium-grey: #bfc0c0;
 	background: $white;
 	}
 	p {
-		color: $dark;
+		margin: 3rem 0 0 0;
+		text-align: center;
 	}
 	input[type="text"] {
 		margin: .8rem auto 0 auto;
@@ -114,5 +87,16 @@ $medium-grey: #bfc0c0;
 	.button {
 		padding: .7rem .9rem;
 		margin-top: 2rem;
+	}
+}
+.delete {
+	a {
+		color: darken($medium-grey, 15%);
+		text-decoration: none;
+		padding: 1rem 1rem;
+		transition: .2s ease-in-out;
+		&:hover {
+			color: tomato;
+		}
 	}
 }
