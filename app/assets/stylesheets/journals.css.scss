@@ -71,7 +71,7 @@ $medium-grey: #bfc0c0;
 
 #journal_show {
 	img {
-		width: 100%;
+		width: 100vw;
 	}
 	a {
 		color: $medium-grey;
@@ -80,6 +80,21 @@ $medium-grey: #bfc0c0;
 		transition: .2s ease-in-out;
 		&:hover {
 			color: darken($medium-grey, 15%);
+		}
+	}
+	#add_chapter_button {
+	border: 3px solid darken($medium-grey, 30%);
+	color: darken($medium-grey, 30%);
+	background: transparent;
+	padding: .5rem 1.5rem;
+	display: block;
+	margin: 2rem auto;
+	width: 10rem;
+	text-align: center;
+	transition: .2s ease-in-out;
+		&:hover {
+			border: 3px solid darken($medium-grey, 40%);
+			color: darken($medium-grey, 40%);
 		}
 	}
 }
