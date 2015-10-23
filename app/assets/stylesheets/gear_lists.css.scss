@@ -123,3 +123,39 @@ $medium-grey: #bfc0c0;
 		}
 	}
 }
+
+#gear_item_form {
+	text-align: center;
+	background: lighten($medium-grey, 20%);
+  padding: 3rem;
+	margin: 3rem 0 3rem 0;
+	input[type="text"], textarea {
+	background: $white;
+	}
+	p {
+		color: $dark;
+	}
+	input[type="text"] {
+		margin: .8rem auto 0 auto;
+		width: 80%;
+	}
+	.button {
+		padding: .7rem .9rem;
+		margin-top: 2rem;
+	}
+}
+
+/* RESPONSIVE */
+@media screen and (min-width: 725px) {
+	#gear_form {
+		padding: 5rem;
+		input[type="text"] {
+			margin: 0 auto;
+			width: 40%;
+		}
+		.button {
+			padding: .7rem .9rem;
+			margin-top: 0;
+		}
+	}
+}
