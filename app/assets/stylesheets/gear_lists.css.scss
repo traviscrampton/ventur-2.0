@@ -36,12 +36,12 @@ $medium-grey: #bfc0c0;
 		p {
 			margin: 0;
 			float: left;
-			padding: 1em;
+			padding: 1em 0;
 			font-weight: 300;
 			color: $dark;
 		}
 		.trash {
-			width: 10%;
+			width: 20%;
 			text-align: center;
 			border-left: 1px solid $medium-grey;
 			padding: 1em 0;
@@ -119,6 +119,13 @@ $medium-grey: #bfc0c0;
 
 /* RESPONSIVE */
 @media screen and (min-width: 625px) {
+	#gear_items_wrapper {
+		.gear_item {
+			.trash {
+				width: 10%;
+			}
+		}
+	}
 	#gear_item_form {
 		text-align: center;
 		background: lighten($medium-grey, 20%);
