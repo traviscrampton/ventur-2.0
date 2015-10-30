@@ -1,5 +1,5 @@
 <div class="gear_item">
-	<p><%= gear_item.item_name %></p>
+	<p><%= truncate(gear_item.item_name, length: 30) %></p>
 	<% if current_user == @gear_list.user %>
 		<div class="trash">
 			<%= link_to gear_list_gear_item_path(@gear_list, gear_item.id),

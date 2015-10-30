@@ -5,6 +5,7 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <link href='https://fonts.googleapis.com/css?family=Lato:400,300,700' rel='stylesheet' type='text/css'>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <script src="path/to/jquery.easy-autocomplete.min.js"></script> 
   <%= csrf_meta_tags %>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
@@ -30,8 +31,7 @@
 
 <%= render 'layouts/footer' %>
 
-<script>
-
+<script>	
 	$('#panel-example').scotchPanel({
     containerSelector: 'body', // As a jQuery Selector
     direction: 'right', // Make it toggle in from the left

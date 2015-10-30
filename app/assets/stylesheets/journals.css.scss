@@ -70,8 +70,10 @@ $medium-grey: #bfc0c0;
 }
 
 #journal_show {
+	width: 100%;
 	img {
 		width: 100vw;
+		overflow: hidden;
 	}
 	a {
 		color: $medium-grey;
