@@ -41,6 +41,9 @@ $medium-grey: #bfc0c0;
 					display: inline-block;
 					color: $dark;
 				}
+				.description {
+					min-height: 6rem;
+				}
 				.author {
 					padding-top: 3rem;
 					a {
