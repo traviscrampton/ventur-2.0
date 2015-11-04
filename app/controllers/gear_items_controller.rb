@@ -4,13 +4,17 @@ before_action :set_gear_item, except: [:create]
 
 	def create
 		@gear_item = @gear_list.gear_items.create(gear_item_params)
-
-		redirect_to @gear_list
+		respond_to do |format|
+			format.html { redirect_to @gear_list }
+			format.js { }
+		end
 	end
 
 	def destroy
-		if @gear_item.destroy
-			redirect_to @gear_list
+		@gear_item.destroy
+		respond_to do |format|
+			format.html { render @gear_list }
+			format.js { }
 		end
 	end
 

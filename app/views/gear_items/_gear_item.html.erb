@@ -1,9 +1,9 @@
-<div class="gear_item">
+<div class="gear_item" id="<%= gear_item.id %>">
 	<p><%= truncate(gear_item.item_name, length: 25) %></p>
 	<% if current_user == @gear_list.user %>
 		<div class="trash">
-			<%= link_to gear_list_gear_item_path(@gear_list, gear_item.id),
-				method: :delete do %>
+			<%= link_to gear_list_gear_item_path(@gear_list, gear_item.id), 
+				method: :delete, remote: true do %>
 				<i class="fa fa-trash"></i>
 			<% end %>
 		</div>

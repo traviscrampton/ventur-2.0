@@ -1,9 +1,16 @@
 <div class="wrapper">
 	<div id="gear_items_wrapper">
 		<h1 class="center"><%= @gear_list.title %></h1>
-		<%= render @gear_list.gear_items %>
+		<ul>
+			<li><%= render @gear_list.gear_items %></li>
+		</ul>
 	</div>
 </div>
+
+
+
+
+
 <% if current_user == @gear_list.user %>
 	<div id="gear_item_form">
 		<h2>Add items to your gear list:</h2>
