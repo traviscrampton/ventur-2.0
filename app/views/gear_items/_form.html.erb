@@ -1,12 +1,12 @@
 <div class="wrapper" id="gear_items_ajax">
 	<%= form_for([@gear_list, @gear_list.gear_items.build], remote: true ) do |f| %>
 		<%= f.text_field :item_name, autofocus: true, placeholder:
-		"Patagonia Jacket etc."  %>
+		"Patagonia Jacket etc.", id: "gear_items"  %>
 		<%= f.submit "Add Gear Item", class: "button button_fade" %>
 	<% end %>
 </div>
 
-<!-- <script>
+<script>
 	var options = {
 		data: [ 
 						"Patagonia Nanopuff Jacket", 
@@ -98,4 +98,4 @@
 	};
 
 	$("#gear_items").easyAutocomplete(options);
-</script> -->
+</script> 
