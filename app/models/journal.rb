@@ -2,7 +2,7 @@ class Journal < ActiveRecord::Base
 	belongs_to :user
 	validates :user_id, presence: true
 	validates :title, presence: true, length: { maximum: 50 }
- 	validates :description, presence: true
+ 	validates :description, presence: true, length: { maximum: 150 }
 
 	has_attached_file :journal_image,
 	styles: { 
