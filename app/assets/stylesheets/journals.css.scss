@@ -136,6 +136,7 @@ $medium-grey: #bfc0c0;
 	}
 	.cover_links {
 		text-align: center;
+		font-size: .1rem;
 		color: $white;
 		width: 100%;
 		list-style: none;
@@ -146,13 +147,16 @@ $medium-grey: #bfc0c0;
 		}
 		li {
 			min-width: 5rem;
-			font-size: .7rem;
 			display: inline-block;
 			padding: 0 .6rem;
+
 			font-weight: 100;
 			transition: .2s ease-in-out;
 			&:hover {
 			color: darken($white, 20%);
+			}
+			a {
+				font-size: 1rem;
 			}
 		}
 		.li_with_border-right {
@@ -229,7 +233,7 @@ $medium-grey: #bfc0c0;
 				li {
 					font-size: 1rem;
 					display: inline-block;
-					padding: 0 .6rem;
+					padding: 0;
 					font-weight: 100;
 					transition: .2s ease-in-out;
 					&:hover {
