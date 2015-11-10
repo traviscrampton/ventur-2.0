@@ -78,10 +78,10 @@ $medium-grey: #bfc0c0;
 
 #journal_show {
 	#cover {
-		height: 70vh;
+		height: 90vh;
 	}
 	.wrapper {
-		padding: 3rem 2rem;
+		padding: 2rem 2rem;
 	}
 	h1 {
 		font-size: 2.1rem;
@@ -90,7 +90,7 @@ $medium-grey: #bfc0c0;
 	.description {
 		color: $light;
 		font-weight: lighter;
-		font-size: 1.3rem;
+		font-size: 1.1rem;
 	}
 	.date {
 		margin-top: -1rem;
@@ -105,7 +105,22 @@ $medium-grey: #bfc0c0;
 		text-decoration: none;
 		font-size: 1.2rem;
 		padding: 0;
-		margin-top: 2rem;
+		margin-top: 0%;
+	}
+	#follow_button {
+	border: 3px solid $sunset;
+	color: $sunset;
+	background: transparent;
+	padding: .7rem .3rem;
+	display: block;
+	margin: 0 auto;
+	width: 6rem;
+	text-align: center;
+	transition: .2s ease-in-out;
+		&:hover {
+			border: 3px solid darken($white, 20%);
+			color: darken($white, 20%);
+		}
 	}
 	a {
 		color: lighten($medium-grey, 20%);
@@ -118,38 +133,28 @@ $medium-grey: #bfc0c0;
 			color: darken($medium-grey, 15%);
 		}
 	}
-	#follow_button {
-	border: 3px solid $sunset;
-	color: $sunset;
-	background: transparent;
-	padding: .7rem .3rem;
-	display: block;
-	margin: .2rem auto;
-	width: 6rem;
-	text-align: center;
-	transition: .2s ease-in-out;
-		&:hover {
-			border: 3px solid darken($white, 20%);
-			color: darken($white, 20%);
-		}
-	}
 	.cover_links {
 		text-align: center;
 		color: $white;
-		width: 80%;
+		width: 100%;
 		list-style: none;
-		padding: 1.3rem 2rem;
+		padding: 1.3rem 0;
 		margin: 0 auto;
 		hr {
-			width: 70%;
+			display: none;
 		}
 		li {
-			font-size: 1.1rem;
+			font-size: .7rem;
+			display: inline-block;
+			padding: 0 .6rem;
 			font-weight: 100;
 			transition: .2s ease-in-out;
 			&:hover {
 			color: darken($white, 20%);
 			}
+		}
+		.li_with_border-right {
+			border-right: 1px solid $sunset;
 		}
 	}
 	#add_chapter_button {
@@ -195,7 +200,7 @@ $medium-grey: #bfc0c0;
 				max-width: 70%;
 			}
 			.date {
-				margin-bottom: 9rem;
+				margin-bottom: 20vh;
 				color: $medium-grey;
 			}
 			.author {
@@ -206,13 +211,31 @@ $medium-grey: #bfc0c0;
 				margin: 0;
 				float: left;
 			}
-			ul {
+			.cover_links {
 				padding: 0 0;
 				display: inline-block;
     		float: right;
     		margin-top: -3rem;
-    		width: 15rem;
-			}	
+    		width: 10rem;
+				hr {
+					width: 10rem;
+					display: block;
+				}
+				li {
+					font-size: 1rem;
+					display: inline-block;
+					padding: 0 .6rem;
+					font-weight: 100;
+					transition: .2s ease-in-out;
+					&:hover {
+					color: darken($white, 20%);
+					}
+				}
+				/* taked out the orange | characters */
+				.li_with_border-right {
+					border-right: 0 solid $sunset;
+				}
+			}
 		}
   }
 }
