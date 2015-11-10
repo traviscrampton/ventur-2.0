@@ -77,8 +77,11 @@ $medium-grey: #bfc0c0;
 }
 
 #journal_show {
+	#cover {
+		height: 70vh;
+	}
 	.wrapper {
-		padding: 2rem 2rem;
+		padding: 3rem 2rem;
 	}
 	h1 {
 		font-size: 2.1rem;
@@ -90,19 +93,63 @@ $medium-grey: #bfc0c0;
 		font-size: 1.3rem;
 	}
 	.date {
+		margin-top: -1rem;
 		color: $medium-grey;
 	}
 	span {
 		color: $white;
+	}
+	.author {
+		text-align: center;
+		color: lighten($medium-grey, 20%);
+		text-decoration: none;
+		font-size: 1.2rem;
+		padding: 0;
+		margin-top: 2rem;
 	}
 	a {
 		color: lighten($medium-grey, 20%);
 		text-decoration: none;
 		font-size: 1.2rem;
 		padding: 0;
+		margin-top: 2rem;
 		transition: .2s ease-in-out;
 		&:hover {
 			color: darken($medium-grey, 15%);
+		}
+	}
+	#follow_button {
+	border: 3px solid $sunset;
+	color: $sunset;
+	background: transparent;
+	padding: .7rem .3rem;
+	display: block;
+	margin: .2rem auto;
+	width: 6rem;
+	text-align: center;
+	transition: .2s ease-in-out;
+		&:hover {
+			border: 3px solid darken($white, 20%);
+			color: darken($white, 20%);
+		}
+	}
+	.cover_links {
+		text-align: center;
+		color: $white;
+		width: 80%;
+		list-style: none;
+		padding: 1.3rem 2rem;
+		margin: 0 auto;
+		hr {
+			width: 70%;
+		}
+		li {
+			font-size: 1.1rem;
+			font-weight: 100;
+			transition: .2s ease-in-out;
+			&:hover {
+			color: darken($white, 20%);
+			}
 		}
 	}
 	#add_chapter_button {
@@ -120,24 +167,11 @@ $medium-grey: #bfc0c0;
 			color: darken($medium-grey, 40%);
 		}
 	}
-	#follow_button {
-	border: 3px solid $sunset;
-	color: $sunset;
-	background: transparent;
-	padding: .7rem .3rem;
-	display: block;
-	margin: 2rem auto;
-	width: 6rem;
-	text-align: center;
-	transition: .2s ease-in-out;
-		&:hover {
-			border: 3px solid darken($white, 20%);
-			color: darken($white, 20%);
-		}
-	}
 }
 
 /* RESPONSIVE! */
+
+
 
 @media screen and (min-width: 625px) {
   #journals {
@@ -150,19 +184,35 @@ $medium-grey: #bfc0c0;
   #journal_show {
 		.wrapper {
 			float: left; 
-			padding: 2rem 10%;
+			padding: 6rem 10%;
 			text-align: left;
+			h1 {
+				font-size: 2.6rem;
+			}
 			p {
 				padding: .2rem 0;
 				margin: 0 0;
-				max-width: 50%;
+				max-width: 70%;
 			}
-			a .links {
-				margin-top: 2rem;
+			.date {
+				margin-bottom: 9rem;
+				color: $medium-grey;
+			}
+			.author {
+				margin-top: 4rem;
+				text-align: left;
 			}
 			#follow_button {
-				margin: 2rem 0;
+				margin: 0;
+				float: left;
 			}
+			ul {
+				padding: 0 0;
+				display: inline-block;
+    		float: right;
+    		margin-top: -3rem;
+    		width: 15rem;
+			}	
 		}
   }
 }
