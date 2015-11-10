@@ -18,21 +18,21 @@
 				<span> | </span>
 				<%= link_to "delete", journal_path(@journal), method: :delete, data: {confirm: "Are you sure you want to delete this Journal?"}, class: "links" %>
 			<% else %>
-				<%= link_to "Follow", new_user_registration_path, id: "follow_button" %>
+				<%= link_to "Follow", "#", id: "follow_button" %>
 
 			<% end %>
 			<ul class="cover_links center">
-				<li class="li_with_border-right">the gear list</li>
+				<li class="li_with_border-right"><%= link_to "the gear list", gear_lists_path %></li>
 				<hr class="short">
-				<li class="li_with_border-right">the cause</li>
+				<li class="li_with_border-right"><%= link_to "the cause", "#" %></li>
 				<hr class="short">
-				<li>funds raised: $126</li>
+				<li><%= link_to "funds raised: $123", "#" %></li>
 			</ul>
 		</div>
 	</div>
 	<div class="wrapper" id="chapters">
 			<% if current_user == @journal.user %>	
-				<%= link_to "NEW CHAPTER", new_user_registration_path, id: "add_chapter_button" %>
+				<%= link_to "NEW CHAPTER", "#", id: "add_chapter_button" %>
 			<% end %>
 			<p class="chapter_count">0 Chapters</p>
 			<hr>
