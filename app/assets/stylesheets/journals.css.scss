@@ -10,6 +10,23 @@ $sunset: #DA7C63;
 $medium-grey: #bfc0c0;
 
 
+#categories {
+	border-top: 1px solid lighten($dark, 45%);
+	text-align: center;
+	background: lighten($dark, 65%);
+	padding: 1.2rem 0;
+	a {
+		text-transform: uppercase;
+		padding: .5rem;
+		color: $dark;
+		text-decoration: none;
+		transition: .2s ease-in-out;
+		&:hover {
+			color: darken($highlight, 25%);
+		}
+	}
+}
+
 #journals {
 	padding-bottom: 3rem;
 	ul {
@@ -35,7 +52,7 @@ $medium-grey: #bfc0c0;
 				}
 				h2 {
 					font-weight: 700;
-					font-size: 1rem;
+					font-size: 1.4rem;
 					color: $dark;
 				}
 				p {

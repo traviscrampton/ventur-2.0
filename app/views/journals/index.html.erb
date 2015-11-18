@@ -22,6 +22,11 @@
 		</div>
 	</header>
 <% end %>
+<div id="categories">
+		<% JournalCategory.all.each do |category| %>
+			<%= link_to category.name, journals_path(journal_category: category.name) %>
+		<% end %>
+	</div>
 <div id="journals" class="cf">
 	<ul class="cf">
 		<% @journals.each do |journal| %>

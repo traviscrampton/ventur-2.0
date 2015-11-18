@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151022025055) do
+ActiveRecord::Schema.define(version: 20151117185130) do
 
   create_table "gear_items", force: :cascade do |t|
     t.string   "item_name"
@@ -32,6 +32,12 @@ ActiveRecord::Schema.define(version: 20151022025055) do
 
   add_index "gear_lists", ["journal_id"], name: "index_gear_lists_on_journal_id"
 
+  create_table "journal_categories", force: :cascade do |t|
+    t.string   "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "journals", force: :cascade do |t|
     t.datetime "created_at",                 null: false
     t.datetime "updated_at",                 null: false
@@ -42,6 +48,8 @@ ActiveRecord::Schema.define(version: 20151022025055) do
     t.string   "journal_image_content_type"
     t.integer  "journal_image_file_size"
     t.datetime "journal_image_updated_at"
+    t.integer  "gear_list_id"
+    t.integer  "journal_category_id"
   end
 
   add_index "journals", ["user_id"], name: "index_journals_on_user_id"

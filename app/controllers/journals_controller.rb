@@ -5,7 +5,12 @@ class JournalsController < ApplicationController
 	before_filter :require_permission, only: [:edit, :update, :destroy]
 	
 	def index
-		@journals = Journal.all.order("created_at DESC")
+		if params[:journal_category].blank?
+			@journals = Journal.all.order("created_at DESC")
+		else
+			@category_id = JournalCategory.find_by(name: params[:journal_category]).id
+			@journals = Journal.where(journal_category_id: @category_id).order("created_at DESC")
+		end
 	end
 
 	def new
@@ -51,7 +56,7 @@ class JournalsController < ApplicationController
 		end
 				
 		def journal_params
-			params.require(:journal).permit(:title, :description, :journal_image)
+			params.require(:journal).permit(:title, :description, :journal_image, :journal_category_id)
 		end
 
 		def require_permission
