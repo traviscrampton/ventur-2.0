@@ -1,5 +1,7 @@
-
-
 $('ul').append("<%= j render partial: 'gear_item', locals:
 	{gear_item: @gear_item} %>");
 
+// reset form after submission
+$("#new_gear_item").each(function(){
+		this.reset();
+	});
