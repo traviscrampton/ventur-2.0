@@ -108,7 +108,7 @@ $medium-grey: #bfc0c0;
 	.description {
 		color: $light;
 		font-weight: lighter;
-		font-size: 1.1rem;
+		font-size: 1.3rem;
 	}
 	.date {
 		margin-top: -1rem;
@@ -242,19 +242,24 @@ $medium-grey: #bfc0c0;
 				display: inline-block;
     		float: right;
     		margin-top: -3rem;
-    		width: 10rem;
+    		width: 14rem;
 				hr {
-					width: 10rem;
+					width: 14rem;
 					display: block;
 				}
 				li {
-					font-size: 1rem;
+					font-size: 1.2rem;
+					text-transform: uppercase;
+					letter-spacing: 1px;
 					display: inline-block;
-					padding: 0;
+					padding: .2rem .2rem;
 					font-weight: 100;
 					transition: .2s ease-in-out;
 					&:hover {
 					color: darken($white, 20%);
+					}
+					a {
+						padding: .5rem 1rem;
 					}
 				}
 				/* taked out the orange | characters */

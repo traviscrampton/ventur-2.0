@@ -11,13 +11,16 @@ Rails.application.routes.draw do
     resources :gear_items
   end
 
-  authenticated :user do
-    root to: "journals#index", as: :authenticated_root
-  end
+  root 'welcome#index'
+   
 
-  unauthenticated do
-    root to: "welcome#index"
-  end
+  # #authenticated :user do
+  #   root to: "journals#index", as: :authenticated_root
+  # end
+
+  # unauthenticated do
+  #   root to: "welcome#index"
+  # end
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
